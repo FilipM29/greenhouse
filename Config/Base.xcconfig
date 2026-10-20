@@ -1,0 +1,10 @@
+// Shared build settings. Personal values (Team ID, bundle prefix, CloudKit
+// container) live in Local.xcconfig, which is git-ignored.
+
+BUNDLE_ID_PREFIX = com.example
+DEVELOPMENT_TEAM =
+CLOUDKIT_CONTAINER = iCloud.$(BUNDLE_ID_PREFIX).greenhouse
+
+// Optional include: CI and fresh clones build without it. Keep this last so
+// values in Local.xcconfig override the defaults above.
+#include? "Local.xcconfig"

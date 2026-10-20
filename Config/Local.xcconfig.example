@@ -1,0 +1,14 @@
+// Copy to Config/Local.xcconfig (git-ignored) and fill in your own values.
+//   cp Config/Local.xcconfig.example Config/Local.xcconfig
+
+// Apple Developer Team ID: developer.apple.com > Membership details,
+// or Xcode > Settings > Accounts.
+DEVELOPMENT_TEAM =
+
+// Reverse-DNS prefix you own, e.g. com.yourname. The app ID becomes
+// $(BUNDLE_ID_PREFIX).greenhouse.
+BUNDLE_ID_PREFIX = com.example
+
+// iCloud container used for sync and sharing. Xcode registers it for you with
+// automatic signing.
+CLOUDKIT_CONTAINER = iCloud.$(BUNDLE_ID_PREFIX).greenhouse

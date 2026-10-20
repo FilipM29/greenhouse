@@ -1,0 +1,6 @@
+// Used by CI via `xcodebuild -xcconfig`. No signing, no secrets.
+#include "Base.xcconfig"
+
+CODE_SIGNING_ALLOWED = NO
+CODE_SIGNING_REQUIRED = NO
+CODE_SIGN_IDENTITY =
