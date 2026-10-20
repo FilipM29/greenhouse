@@ -1,0 +1,19 @@
+title = "Greenhouse gitleaks config"
+
+[extend]
+useDefault = true
+
+# Full Anthropic key format only, so the bare "sk-ant-" prefix used by
+# redaction code does not trigger it.
+[[rules]]
+id = "anthropic-api-key-full"
+description = "Anthropic API key"
+regex = '''sk-ant-[a-z]+\d{2}-[A-Za-z0-9_\-]{80,}'''
+keywords = ["sk-ant-"]
+
+# A real Team ID belongs in Config/Local.xcconfig (git-ignored), never in tracked files.
+[[rules]]
+id = "apple-team-id-assignment"
+description = "Apple Team ID assigned to DEVELOPMENT_TEAM"
+regex = '''DEVELOPMENT_TEAM\s*[=:]\s*"?[A-Z0-9]{10}\b'''
+keywords = ["development_team"]
